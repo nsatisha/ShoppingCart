@@ -1,0 +1,88 @@
+<div class="wrapper">
+    <!-- #signupForm="ngForm" -->
+    <form [formGroup]="customerForm" class="form-signin"  (ngSubmit)="onSignup()">
+        <h3 class="form-signin-heading">Create Account</h3>
+        <label for="username">Your Name</label>
+        <input type="text" class="form-control"  id="username" name="username" placeholder="User Name" formControlName="username" autofocus=""/>
+        <span class="help-block inputFieldValidation" *ngIf="userNameInValid">Required Field</span>
+        <label for="mobile">Mobile Number</label>
+        <input type="number" class="form-control" name="mobile" formControlName="mobile" placeholder="Mobile" />
+        <span class="help-block inputFieldValidation" *ngIf="mobileInValid">Required Field</span>
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email" formControlName="email" placeholder="Email" />
+        <span class="help-block inputFieldValidation" *ngIf="emailInValid">{{ emailError}}</span>
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" formControlName="password" placeholder="Password"  />
+        <span class="help-block inputFieldValidation" *ngIf="passwordInValid">Required Field</span>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!customerForm.valid">Sign up</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="wrapper">
+    <form class="form-signin left">
+        <legend><h4>Customer Registration</h4></legend>
+        <div class="row" [formGroup]="signupForm">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="customerFirstName">First Name</label>
+                    <input type="text" name="customerFirstName" id="customerFirstName" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="customerLastName">Last Name</label>
+                    <input type="text" name="customerLastName" id="customerLastName" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="customerGender">Gender</label>
+                    <input type="text" name="customerGender" id="customerGender" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="customerMobileNumber">Mobile Number</label>
+                    <input type="number" name="customerMobileNumber" id="customerMobileNumber" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="customerEmail">Email-id</label>
+                    <input type="text" name="customerEmail" id="customerEmail" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="customerAddress">Address</label>
+                    <input type="text" name="customerAddress" id="customerAddress" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                    <button type="submit" class="btn btn-primary pull-right">Register</button>
+            </div>
+        </div>
+    </form>
+</div> -->
