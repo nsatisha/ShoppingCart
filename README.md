@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This application is small training app developed during training. 
+Checkout the code
+> npm install
+> npm build
+> ng serve --proxy-config proxy.conf.json   // this command is to access the restservice hosted on the tomcat 

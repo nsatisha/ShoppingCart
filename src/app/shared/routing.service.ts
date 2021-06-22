@@ -48,7 +48,7 @@ export class RoutingService {
     console.log('getUser');
     this.http
       .get('/api/getUser', {
-        params: { username },
+        params: { username }
       })
       .subscribe((responsedata: Customer) => {
         console.log(
