@@ -30,4 +30,4 @@ This application is small training app developed during training.
 Checkout the code
 > npm install
 > npm build
-> ng serve --proxy-config proxy.conf.json   // this command is to access the restservice hosted on the tomcat 
+> ng serve --proxy-config proxy.conf.json   // this command is to access the restservice hosted on the tomcat on port 8002
